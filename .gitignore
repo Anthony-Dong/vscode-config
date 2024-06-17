@@ -1,12 +1,1 @@
-__pycache__
-bazel-*
-*/output/*
-*/*/output/*
-/venv
-*.o
-*.a
-python/output
-/temp
-python/__pycache__
-/.pytest_cache
-/.benchmarks
+output
