@@ -1,0 +1,2 @@
+CompileFlags:
+  Compiler: /usr/local/opt/llvm@14/bin/clang++

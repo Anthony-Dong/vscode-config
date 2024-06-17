@@ -1,0 +1,9 @@
+{
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true
+  },
+  "python.languageServer": "Pylance",
+  "python.defaultInterpreterPath": "python3.9",
+  "isort.args": ["--profile", "black"]
+}

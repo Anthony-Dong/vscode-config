@@ -1,0 +1,117 @@
+{
+	// Place your snippets for go here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+    "main": {
+        "prefix": "main",
+        "body": [
+            "package main",
+            "",
+            "func main() {",
+            "  $0",
+            "}"
+        ]
+    },
+    "if err": {
+        "prefix": "if_err",
+        "body": [
+            "if err != nil {",
+            "   $0",
+            "}"
+        ]
+    },
+    "if funcion err": {
+        "prefix": "if_err_func",
+        "body": [
+            "if err:=${0:foo()}; err != nil {",
+            "  ",
+            "}"
+        ],
+    },
+    "test": {
+        "prefix": "test",
+        "body": [
+            "func Test${1:Name}(t *testing.T) {",
+            "   $0",
+            "}"
+        ],
+    },
+    "benchmark": {
+        "prefix": "benchmark",
+        "body": [
+            "func Benchmark${1:Name}(b *testing.B) {",
+            "   for i := 0; i < b.N; i++ {",
+            "       $0",
+            "   }",
+            "}"
+        ],
+    },
+    "for range": {
+        "prefix":"forrange",
+        "body": [
+            "for _, elem := range $1 {",
+            "   $0",
+            "}"
+        ]
+    },
+    "sort": {
+        "prefix":"sortslice",
+        "body": [
+            "sort.Slice(${1:item}, func(i, j int) bool {",
+            "   ",
+            "})"
+        ]
+    },
+    "defer": {
+        "prefix":"defer",
+        "body": [
+            "defer func() {",
+            "   $0",
+            "}()"
+        ]
+    },
+    "append": {
+        "prefix": "append",
+        "body": [
+            "${1:items} = append(${1:items}, ${0:elem})"
+        ]
+    },
+    "context value": {
+        "prefix": "ctx_value",
+        "body": [
+            "ctx = context.WithValue(ctx, ${1:key}, ${0:value})"
+        ]
+    },
+    "context background": {
+        "prefix": "ctx_background",
+        "body": [
+            "$0context.Background()"
+        ]
+    },
+    "struct": {
+        "prefix": "struct",
+        "body": [
+            "type ${1:Struct} struct {",
+            "   $0",
+            "}"
+        ]
+    },
+    "interface": {
+        "prefix": "interface",
+        "body": [
+            "type ${1:Interface} interface {",
+            "   $0",
+            "}"
+        ]
+    }    
+}

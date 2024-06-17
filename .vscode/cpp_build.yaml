@@ -1,0 +1,16 @@
+CXX: /usr/local/opt/llvm@14/bin/clang++
+CC: /usr/local/opt/llvm@14/bin/clang
+BuildType: debug
+BuildArgs: # 编译选项
+  - -DFMT_HEADER_ONLY
+  - -std=c++20
+  - -stdlib=libc++ # libc++ 是 LLVM/clang 项目的 C++ 标准库实现, libstdc++ 是 GNU 的 C++ 标准库实现
+  - -pthread
+  - -I/usr/local/include
+LinkArgs: # 链接选项
+  - -L/usr/local/lib
+  - -stdlib=libc++
+  - -lc++abi # 同libc++
+  - -pthread
+  - -lgtest
+  - -lgtest_main
