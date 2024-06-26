@@ -38,4 +38,6 @@
     "args": [],
     "cwd": "${workspaceFolder}"
   }
+  // cmake kits
+  // https://github.com/microsoft/vscode-cmake-tools/blob/main/docs/kits.md
 }
