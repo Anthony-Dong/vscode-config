@@ -1,0 +1,33 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "run:main",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${workspaceFolder}/main.go",
+            "args": [
+                ""
+            ],
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "K1": "V1"
+            }
+        },
+        {
+            "name": "test:Test_Add",
+            "type": "go",
+            "request": "launch",
+            "mode": "test",
+            "program": "${workspaceFolder}/utils",
+            "args": [
+                "-test.run=Test_Add"
+            ],
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "K1": "V1"
+            }
+        }
+    ]
+}
